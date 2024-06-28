@@ -140,7 +140,7 @@ int main() {
 				cout << endl << "Enter a value to front push ==> ";
 				cin >> value;
 				linkedList.push_front(value);
-				cout << "DEBUG: " << linkedList.front() << endl;
+				cout << endl << linkedList.front() << " has been pushed." << endl;
 			}
 
 			else if (userInput == "2") {
@@ -172,7 +172,11 @@ int main() {
 
 			else if (userInput == "6") {
 
+				cout << endl;
+
 				linkedList.printValues();
+
+				cout << endl;
 			}
 		}
 	}

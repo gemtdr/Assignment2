@@ -98,18 +98,20 @@ T LinkedList<T>::pop_front() {
 		delete head;
 		head = nullptr;
 		tail = nullptr;
+		numItems--;
 		return toReturn;
 	}
 
 
 	else {
 
-		int toReturn = head->data;
+		
 
-		Node<T>* ptr = head->next;
-		head->next = head->next->next;
+		Node<T>* ptr = head;
+		head = head->next;
+		int toReturn = ptr->data;
 		delete ptr;
-
+		numItems--;
 		return toReturn;
 	}
 }
